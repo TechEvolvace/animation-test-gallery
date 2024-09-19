@@ -1,3 +1,43 @@
-.important-text{
-    color: blue;
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root{
+    /* CSS Variables to implement */
+    --full-window-width: 100vw;
+    --full-window-height: 100vh;
+}
+
+/* Design the welcome screen message section that will first appear when the user loads up this website from its soon-to-be-deployed URL! */
+main.welcome-screen{
+    background-color: black;
+    width: var(--full-window-width);
+    height: var(--full-window-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section.welcome-message{
+    width: calc(0.5 * var(--full-window-width));
+    height: calc(0.5 * var(--full-window-height));
+    background-color: none; 
+    border: 1px solid white; 
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    /* Justify-content and align-content will align all of this element's subelements! */
+    justify-content: center;
+    align-content: center;
+}
+
+main > section.welcome-message > header,
+main > section.welcome-message > article{
+    padding: 4%;
+    margin: 4%;
 }
