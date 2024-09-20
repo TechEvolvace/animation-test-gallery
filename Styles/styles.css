@@ -21,6 +21,7 @@ main.welcome-screen{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2; 
 }
 
 main > section.welcome-message{
@@ -34,10 +35,17 @@ main > section.welcome-message{
     /* Justify-content and align-content will align all of this element's subelements! */
     justify-content: center;
     align-content: center;
+    transition: 3s ease-in-out;
 }
 
+/* Control spacing for welcome message screen's content */
 main > section.welcome-message > header,
 main > section.welcome-message > article{
     padding: 4%;
     margin: 4%;
+}
+
+span.emphasized-text{
+    color: orange;
+    transition: 3s ease-in-out;
 }
